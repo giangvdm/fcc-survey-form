@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,11 +10,40 @@
     <!-- Load Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
     <!-- Load normalize.css -->
-    <link rel="stylesheet" href="src/lib/normalize.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="src/css/style.css" />
+    <link rel="stylesheet" href="dist/lib/normalize.css">
+    <!-- Load custom CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="dist/css/style.css" />
+    <!-- Load responsive CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="dist/css/responsive.css">
 </head>
+
 <body>
-    <h1>Survey Form</h1>
+    <h1 id="title">Survey Form</h1>
+    <div id="container">
+        <p id="description">Let us know about your language learning</p>
+        <form action="" id="survey-form">
+            <div class="row">
+                <div class="label-div">
+                    <label for="name">Name</label>
+                </div>
+                <input type="text" id="name" class="input-field" required>
+            </div>
+            <div class="row">
+                <div class="label-div">
+                    <label for="email">Email</label>
+                </div>
+                <input type="email" id="email" class="input-field" required>
+            </div>
+            <div class="row">
+                <div class="label-div">
+                    <label for="age">Age</label>
+                </div>
+                <input type="number" id="age" class="input-field" required>
+            </div>
+            <button id="submit ">Submit</button>
+        </form>
+    </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
+
 </html>

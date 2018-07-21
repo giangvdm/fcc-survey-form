@@ -1,0 +1,50 @@
+// Add the first line comment to enable SASS Auto Compile
+@import "_variables.scss";
+
+/* ****
+Main styling
+ **** */
+body {
+    font-family: 'PT Sans', sans-serif;
+    color: $blacksteel;
+    min-width: 320px;
+}
+
+#title, #description {
+    text-align: center;
+}
+
+#container {
+    background-color: $paper;
+    border-radius: 2px;
+    padding: 20px 10px;
+    margin: 0 auto;
+    /* width: 50%; */
+}
+
+.label-div {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    padding: 10px 0;
+}
+
+label {
+    margin-right: 20px;
+
+    &::after {
+        content: " *";
+        color: $rubyred;
+    }
+}
+
+.input-field {
+    padding: 5px;
+    border: 1px solid $blacksteel;
+    border-radius: 2px;
+
+    &:focus {
+        border-color: $goldleaf;
+        outline: none;
+    }
+}

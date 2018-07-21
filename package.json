@@ -1,0 +1,23 @@
+{
+  "name": "survey-form",
+  "version": "1.0.0",
+  "description": "Just another FreeCodeCamp Project",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel --presets es2015 src/js -d dist/js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giangvdm15/fcc-survey-form.git"
+  },
+  "author": "giangvdm15",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giangvdm15/fcc-survey-form/issues"
+  },
+  "homepage": "https://github.com/giangvdm15/fcc-survey-form#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
