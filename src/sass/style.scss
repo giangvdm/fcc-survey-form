@@ -1,12 +1,12 @@
 // Add the first line comment to enable SASS Auto Compile
-@import "_variables.scss";
+@import "partials/variables";
 
 /* ****
 Main styling
  **** */
 body {
     font-family: 'PT Sans', sans-serif;
-    color: $blacksteel;
+    color: $color-blacksteel;
     min-width: 320px;
 }
 
@@ -14,37 +14,61 @@ body {
     text-align: center;
 }
 
+h1#title {
+    letter-spacing: 1px;
+}
+
 #container {
-    background-color: $paper;
+    background-color: $color-paper;
     border-radius: 2px;
     padding: 20px 10px;
     margin: 0 auto;
     /* width: 50%; */
 }
 
-.label-div {
-    display: inline-block;
-    width: 50%;
-    text-align: right;
-    padding: 10px 0;
-}
+/*
+Row module
+*/
+.row {
+    .label-div {
+        display: inline-block;
+        width: 50%;
+        text-align: right;
+        padding: 10px 0;
+        margin-right: 20px;
+        vertical-align: top;
+    }
+    .label-required {
+        label {
+            &::before {
+                content: "* ";
+                color: $color-rubyred;
+            }
+        }
+    }
 
-label {
-    margin-right: 20px;
+    .input-div {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
 
-    &::after {
-        content: " *";
-        color: $rubyred;
+        .input-field {
+            padding: 5px;
+            border: 1px solid $color-blacksteel;
+            border-radius: 2px;
+        
+            &:focus {
+                border-color: $color-goldleaf;
+                outline: none;
+            }
+        }
+        > * {
+            height: 100%;
+        }
     }
 }
 
-.input-field {
-    padding: 5px;
-    border: 1px solid $blacksteel;
-    border-radius: 2px;
-
-    &:focus {
-        border-color: $goldleaf;
-        outline: none;
-    }
+#radio-list {
+    list-style-type: none;
+    padding: 0;
 }

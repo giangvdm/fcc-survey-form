@@ -20,25 +20,63 @@
 <body>
     <h1 id="title">Survey Form</h1>
     <div id="container">
-        <p id="description">Let us know about your language learning</p>
+        <p id="description">Let us know about your foreign language learning</p>
         <form action="" id="survey-form">
             <div class="row">
-                <div class="label-div">
-                    <label for="name">Name</label>
+                <div class="label-div label-required">
+                    <label for="name" id="name-label">Name</label>
                 </div>
-                <input type="text" id="name" class="input-field" required>
+                <div class="input-div">
+                    <input type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label-div label-required">
+                    <label for="email" id="email-label">Email</label>
+                </div>
+                <div class="input-div">
+                    <input type="email" name="email" id="email" class="input-field" placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label-div label-required">
+                    <label for="age" id="number-label">Age</label>
+                </div>
+                <div class="input-div">
+                    <input type="number" name="age" id="number" class="input-field" min="1" max="125" placeholder="Age" required>
+                </div>
             </div>
             <div class="row">
                 <div class="label-div">
-                    <label for="email">Email</label>
+                    <label for="role">Which option best describes your current role?</label>
                 </div>
-                <input type="email" id="email" class="input-field" required>
+                <div class="input-div">
+                    <select name="role" id="dropdown">
+                        <option value="student">Student</option>
+                        <option value="full-time-job">Full-time Job</option>
+                        <option value="part-time-job">Part-time Job</option>
+                        <option value="null">Prefer not to say</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
             </div>
             <div class="row">
-                <div class="label-div">
-                    <label for="age">Age</label>
+                <div class="label-div label-required">
+                    <label for="lang-learning-status">Are you currently learning foreign language(s) or planning to do so?</label>
                 </div>
-                <input type="number" id="age" class="input-field" required>
+                <div class="input-div">
+                    <ul id="radio-list">
+                        <li class="radio-button">
+                            <label class="radio-label"><input type="radio" name="status-choice" class="lang-learning-status" value="yes">Yes</label>
+                        </li>
+                        <li class="radio-button">
+                            <label class="radio-label"><input type="radio" name="status-choice" class="lang-learning-status" value="not-sure">Not sure</label>
+                        </li>
+                        <li class="radio-button">
+                            <label class="radio-label"><input type="radio" name="status-choice" class="lang-learning-status" value="no">No</label>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <button id="submit ">Submit</button>
         </form>
