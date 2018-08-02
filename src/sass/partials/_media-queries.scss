@@ -1,26 +1,33 @@
+@mixin tiny-phone {
+	@media (min-width: 320px) and (max-width: 480px) {
+		@content;
+		//-------xxs--------
+	}
+}
+
 @mixin phone {
-	@media (min-width: 576px) {
+	@media (min-width: 481px) and (max-width: 767px) {
 		@content;
 		//-------xs--------
 	}
 }
 
 @mixin tablet {
-	@media (min-width: 768px) {
+	@media (min-width: 768px) and (max-width: 1023px) {
 		@content;
 		//-------sm--------
 	}
 }
 
 @mixin laptop {
-	@media (min-width: 992px) {
+	@media (min-width: 1024px) {
 		@content;
 		//-------md--------
 	}
 }
 
 @mixin desktop {
-	@media (min-width: 1200px) {
+	@media (min-width: 1824px) {
 		@content;
 		//-------lg--------
 	}

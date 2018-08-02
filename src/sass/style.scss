@@ -1,13 +1,16 @@
 // Add the first line comment to enable SASS Auto Compile
 @import "partials/variables";
+@import "partials/common-styles";
+@import "partials/media-queries";
+@import "partials/reset";
 
 /* ****
 Main styling
- **** */
+**** */
 body {
     font-family: 'PT Sans', sans-serif;
     color: $color-blacksteel;
-    min-width: 320px;
+    // min-width: 320px;
 }
 
 #title, #description {
@@ -18,57 +21,56 @@ h1#title {
     letter-spacing: 1px;
 }
 
+#description {
+    margin: 10px 0 30px;
+}
+
 #container {
     background-color: $color-paper;
-    border-radius: 2px;
-    padding: 20px 10px;
+    border-radius: 5px;
+    box-sizing: border-box; 
     margin: 0 auto;
-    /* width: 50%; */
+    padding-top: 10px;
+    padding-bottom: 30px;
+    
+    @include tiny-phone {
+        width: 95%;
+        padding: 15px 10px 50px;
+    }
+    @include phone {
+        width: 90%;
+        padding: 15px 20px 40px;
+    }
+    @include tablet {
+        width: 80%;
+        padding: 15px 30px 40px;
+    }
+    @include laptop {
+        width: 70%;
+        padding: 15px 40px 30px;
+    }
+    @include desktop {
+        width: 60%;
+        padding: 10px 50px 30px;
+    }
+
+    .row:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    #submit {
+        display: block;
+        margin: 0 auto;
+        font-size: 1.25em;
+        @include borderAndPadding(5px 15px, 1px, 2px);
+    }
 }
 
 /*
 Row module
 */
-.row {
-    .label-div {
-        display: inline-block;
-        width: 50%;
-        text-align: right;
-        padding: 10px 0;
-        margin-right: 20px;
-        vertical-align: top;
-    }
-    .label-required {
-        label {
-            &::before {
-                content: "* ";
-                color: $color-rubyred;
-            }
-        }
-    }
+@import "modules/row.scss";
 
-    .input-div {
-        display: inline-block;
-        text-align: left;
-        vertical-align: middle;
-
-        .input-field {
-            padding: 5px;
-            border: 1px solid $color-blacksteel;
-            border-radius: 2px;
-        
-            &:focus {
-                border-color: $color-goldleaf;
-                outline: none;
-            }
-        }
-        > * {
-            height: 100%;
-        }
-    }
-}
-
-#radio-list {
-    list-style-type: none;
-    padding: 0;
-}
+/* ****
+Responsive styling
+**** */

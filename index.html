@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="dist/lib/normalize.css">
     <!-- Load custom CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="dist/css/style.css" />
-    <!-- Load responsive CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="dist/css/responsive.css">
 </head>
 
 <body>
@@ -27,7 +25,7 @@
                     <label for="name" id="name-label">Name</label>
                 </div>
                 <div class="input-div">
-                    <input type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+                    <input type="text" name="name" id="name" class="type-field" placeholder="Enter your name" required>
                 </div>
             </div>
             <div class="row">
@@ -35,7 +33,7 @@
                     <label for="email" id="email-label">Email</label>
                 </div>
                 <div class="input-div">
-                    <input type="email" name="email" id="email" class="input-field" placeholder="Enter your email" required>
+                    <input type="email" name="email" id="email" class="type-field" placeholder="Enter your email" required>
                 </div>
             </div>
             <div class="row">
@@ -43,7 +41,7 @@
                     <label for="age" id="number-label">Age</label>
                 </div>
                 <div class="input-div">
-                    <input type="number" name="age" id="number" class="input-field" min="1" max="125" placeholder="Age" required>
+                    <input type="number" name="age" id="number" class="type-field" min="1" max="125" placeholder="Age" required>
                 </div>
             </div>
             <div class="row">
@@ -65,20 +63,46 @@
                     <label for="lang-learning-status">Are you currently learning foreign language(s) or planning to do so?</label>
                 </div>
                 <div class="input-div">
-                    <ul id="radio-list">
+                    <ul class="choice-list">
                         <li class="radio-button">
-                            <label class="radio-label"><input type="radio" name="status-choice" class="lang-learning-status" value="yes">Yes</label>
+                            <label class="choice-label"><input type="radio" name="status-choice" class="lang-learning-status" value="yes" required>Yes</label>
                         </li>
                         <li class="radio-button">
-                            <label class="radio-label"><input type="radio" name="status-choice" class="lang-learning-status" value="not-sure">Not sure</label>
+                            <label class="choice-label"><input type="radio" name="status-choice" class="lang-learning-status" value="not-sure">Not sure</label>
                         </li>
                         <li class="radio-button">
-                            <label class="radio-label"><input type="radio" name="status-choice" class="lang-learning-status" value="no">No</label>
+                            <label class="choice-label"><input type="radio" name="status-choice" class="lang-learning-status" value="no">No</label>
                         </li>
                     </ul>
                 </div>
             </div>
-            <button id="submit ">Submit</button>
+            <div class="row">
+                <div class="label-div label-required">
+                    <label for="lang-select">Which language(s)?</label>
+                </div>
+                <div class="input-div">
+                    <ul class="choice-list">
+                        <li>
+                            <label class="choice-label"><input type="checkbox" name="lang-choice" class="lang-choice" value="french" required>French</label>
+                        </li>
+                        <li>
+                            <label class="choice-label"><input type="checkbox" name="lang-choice" class="lang-choice" value="german" required>German</label>
+                        </li>
+                        <li>
+                            <label class="choice-label"><input type="checkbox" name="lang-choice" class="lang-choice" value="chinese" required>Chinese</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="label-div">
+                    <label for="">How do you practice new foreign language(s)?</label>
+                </div>
+                <div class="input-div">
+                    <textarea name="free-share" class="type-field" id="free-share" cols="30" rows="5" placeholder="Please share with us..."></textarea>
+                </div>
+            </div>
+            <button id="submit">Submit</button>
         </form>
     </div>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

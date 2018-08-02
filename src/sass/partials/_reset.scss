@@ -1,0 +1,19 @@
+%no-outline {
+    outline: none;
+}
+
+@each $input-type in $type-fields {
+    input[type=#{$input-type}]{
+        @extend %no-outline;
+    }
+}
+
+textarea {
+    @extend %no-outline;
+}
+
+button, input[type="button"], select {
+    @extend %no-outline;
+    border: 0;
+    padding: 0;
+}

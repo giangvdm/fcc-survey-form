@@ -1,10 +1,18 @@
+button, input[type=button], select, textarea, input[type=number], input[type=email], input[type=text] {
+  outline: none;
+}
+
+button, input[type=button], select {
+  border: 0;
+  padding: 0;
+}
+
 /* ****
 Main styling
- **** */
+**** */
 body {
   font-family: "PT Sans", sans-serif;
   color: #080706;
-  min-width: 320px;
 }
 
 #title, #description {
@@ -15,24 +23,92 @@ h1#title {
   letter-spacing: 1px;
 }
 
+#description {
+  margin: 10px 0 30px;
+}
+
 #container {
   background-color: #EFEFEF;
-  border-radius: 2px;
-  padding: 20px 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
   margin: 0 auto;
-  /* width: 50%; */
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  #container {
+    width: 95%;
+    padding: 15px 10px 50px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  #container {
+    width: 90%;
+    padding: 15px 20px 40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  #container {
+    width: 80%;
+    padding: 15px 30px 40px;
+  }
+}
+@media (min-width: 1024px) {
+  #container {
+    width: 70%;
+    padding: 15px 40px 30px;
+  }
+}
+@media (min-width: 1824px) {
+  #container {
+    width: 60%;
+    padding: 10px 50px 30px;
+  }
+}
+#container .row:last-of-type {
+  margin-bottom: 30px;
+}
+#container #submit {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.25em;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border: 1px solid #080706;
+  border-radius: 2px;
+}
+#container #submit:focus {
+  border-color: #D1B280;
 }
 
 /*
 Row module
 */
+.row {
+  margin-bottom: 10px;
+}
 .row .label-div {
   display: inline-block;
-  width: 50%;
+  width: 48%;
   text-align: right;
-  padding: 10px 0;
+  padding: 6px 0;
   margin-right: 20px;
   vertical-align: top;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .row .label-div {
+    width: 32%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .row .label-div {
+    width: 40%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .row .label-div {
+    width: 45%;
+  }
 }
 .row .label-required label::before {
   content: "* ";
@@ -41,24 +117,46 @@ Row module
 .row .input-div {
   display: inline-block;
   text-align: left;
+  width: 48%;
   vertical-align: middle;
 }
-.row .input-div .input-field {
+.row .input-div .type-field {
+  box-sizing: border-box;
   padding: 5px;
   border: 1px solid #080706;
   border-radius: 2px;
 }
-.row .input-div .input-field:focus {
+.row .input-div .type-field:focus {
   border-color: #D1B280;
-  outline: none;
 }
+
+.row .input-div #dropdown {
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #080706;
+  border-radius: 2px;
+}
+.row .input-div #dropdown:focus {
+  border-color: #D1B280;
+}
+
 .row .input-div > * {
   height: 100%;
 }
-
-#radio-list {
+.row textarea {
+  resize: vertical;
+}
+.row .choice-list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
+.row .choice-list li {
+  margin: 6px 0 6px;
+}
+
+/* ****
+Responsive styling
+**** */
 
 /*# sourceMappingURL=style.css.map */

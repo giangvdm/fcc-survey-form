@@ -1,0 +1,10 @@
+@mixin borderAndPadding($padding, $border-width, $border-radius) {
+    box-sizing: border-box;
+    padding: $padding;
+    border: $border-width solid $color-blacksteel;
+    border-radius: $border-radius;
+
+    @at-root &:focus {
+        border-color: $color-goldleaf;
+    }
+}
