@@ -16,14 +16,20 @@
 </head>
 
 <body>
+    <!-- Form Title -->
     <h1 id="title">Survey Form</h1>
+    <!-- Form container - all contents lay inside here -->
     <div id="container">
         <p id="description">Let us know about your foreign language learning</p>
+        <!-- Main form -->
         <form action="" id="survey-form">
+            <!-- Question row -->
             <div class="row">
+                <!-- Left tab for label -->
                 <div class="label-div label-required">
                     <label for="name" id="name-label">Name</label>
                 </div>
+                <!-- Right tab for input -->
                 <div class="input-div">
                     <input type="text" name="name" id="name" class="type-field" placeholder="Enter your name" required>
                 </div>
@@ -65,13 +71,13 @@
                 <div class="input-div">
                     <ul class="choice-list">
                         <li class="radio-button">
-                            <label class="choice-label"><input type="radio" name="status-choice" class="lang-learning-status" value="yes" required>Yes</label>
+                            <label class="choice-label"><input type="radio" name="status-choice" class="input-choice" value="yes" required>Yes</label>
                         </li>
                         <li class="radio-button">
-                            <label class="choice-label"><input type="radio" name="status-choice" class="lang-learning-status" value="not-sure">Not sure</label>
+                            <label class="choice-label"><input type="radio" name="status-choice" class="input-choice" value="not-sure">Not sure</label>
                         </li>
                         <li class="radio-button">
-                            <label class="choice-label"><input type="radio" name="status-choice" class="lang-learning-status" value="no">No</label>
+                            <label class="choice-label"><input type="radio" name="status-choice" class="input-choice" value="no">No</label>
                         </li>
                     </ul>
                 </div>
@@ -83,29 +89,31 @@
                 <div class="input-div">
                     <ul class="choice-list">
                         <li>
-                            <label class="choice-label"><input type="checkbox" name="lang-choice" class="lang-choice" value="french" required>French</label>
+                            <label class="choice-label"><input type="checkbox" name="lang-choice" class="input-choice" value="french" required>French</label>
                         </li>
                         <li>
-                            <label class="choice-label"><input type="checkbox" name="lang-choice" class="lang-choice" value="german" required>German</label>
+                            <label class="choice-label"><input type="checkbox" name="lang-choice" class="input-choice" value="german" required>German</label>
                         </li>
                         <li>
-                            <label class="choice-label"><input type="checkbox" name="lang-choice" class="lang-choice" value="chinese" required>Chinese</label>
+                            <label class="choice-label"><input type="checkbox" name="lang-choice" class="input-choice" value="chinese" required>Chinese</label>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="label-div">
-                    <label for="">How do you practice new foreign language(s)?</label>
+                    <label for="free-share">How do you practice new foreign language(s)?</label>
                 </div>
                 <div class="input-div">
-                    <textarea name="free-share" class="type-field" id="free-share" cols="30" rows="5" placeholder="Please share with us..."></textarea>
+                    <textarea name="free-share" class="type-field" id="free-share" cols="28" rows="5" placeholder="Please share with us..."></textarea>
                 </div>
             </div>
             <button id="submit">Submit</button>
         </form>
     </div>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <!-- Load custom JS -->
+    <script src="dist/js/main.js"></script>
 </body>
 
 </html>

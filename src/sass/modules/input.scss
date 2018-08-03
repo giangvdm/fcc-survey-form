@@ -4,11 +4,25 @@
     width: 48%;
     vertical-align: middle;
 
+    @include tiny-phone {
+        width: 40%;
+    }
+
     .type-field {
+        max-width: 100%;
         @include borderAndPadding(5px, 1px, 2px);
+
+        &::placeholder {
+            font-size: 90%;
+
+            @include tiny-phone {
+                font-size: 80%;
+            }
+        }
     }
     #dropdown {
         @include borderAndPadding(5px, 1px, 2px);
+        max-width: 100%;
     }
     > * {
         height: 100%;
@@ -25,6 +39,12 @@ textarea {
     margin: 0;
 
     li {
-        margin: 6px 0 6px;
+        &:not(:last-of-type) {
+            margin-bottom: 5px;
+        }
+
+        .input-choice {
+            margin-right: 5px;
+        }
     }
 }
