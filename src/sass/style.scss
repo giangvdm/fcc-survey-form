@@ -19,6 +19,7 @@ body {
 
 h1#title {
     letter-spacing: 1px;
+    text-shadow: 4px 6px 24px #2A3132;
 }
 
 #description {
@@ -29,8 +30,8 @@ h1#title {
 #container {
     background-color: $color-paper;
     border-radius: 5px;
-    box-sizing: border-box; 
-    margin: 0 auto;
+    box-sizing: border-box;
+    margin: 0 auto 50px;
     padding-top: 10px;
     padding-bottom: 30px;
     
@@ -57,14 +58,22 @@ h1#title {
 
     @import "modules/row.scss";
 
-    .row:last-of-type {
+    .row:last-child {
         margin-bottom: 30px;
     }
 
     #submit {
         display: block;
         margin: 0 auto;
-        font-size: 1.25em;
-        @include borderAndPadding(5px 15px, 1px, 2px);
+        font-size: 1.15em;
+        text-transform: uppercase;
+        transition: all 0.25s;
+        @include borderAndPadding(8px 15px, 1px, 2px);
+
+        &:hover {
+            cursor: pointer;
+            background-color: #F1F1F2;
+            color: $color-goldleaf;
+        }
     }
 }

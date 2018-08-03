@@ -22,6 +22,7 @@ body {
 
 h1#title {
   letter-spacing: 1px;
+  text-shadow: 4px 6px 24px #2A3132;
 }
 
 #description {
@@ -33,7 +34,7 @@ h1#title {
   background-color: #EFEFEF;
   border-radius: 5px;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   padding-top: 10px;
   padding-bottom: 30px;
 }
@@ -105,7 +106,7 @@ h1#title {
 }
 @media (min-width: 320px) and (max-width: 480px) {
   #container .row .input-div {
-    width: 40%;
+    width: 45%;
   }
 }
 #container .row .input-div .type-field {
@@ -155,20 +156,28 @@ h1#title {
 #container .row .choice-list li .input-choice {
   margin-right: 5px;
 }
-#container .row:last-of-type {
+#container .row:last-child {
   margin-bottom: 30px;
 }
 #container #submit {
   display: block;
   margin: 0 auto;
-  font-size: 1.25em;
+  font-size: 1.15em;
+  text-transform: uppercase;
+  transition: all 0.25s;
   box-sizing: border-box;
-  padding: 5px 15px;
+  padding: 8px 15px;
   border: 1px solid #080706;
   border-radius: 2px;
 }
 #container #submit:focus {
   border-color: #D1B280;
+}
+
+#container #submit:hover {
+  cursor: pointer;
+  background-color: #F1F1F2;
+  color: #D1B280;
 }
 
 /*# sourceMappingURL=style.css.map */
